@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ShoppingCart, Eye, Heart, Star } from "lucide-react";
+import CardButton from "../buttons/CardButton";
 
 const FoodCard = ({ food }) => {
   return (
@@ -75,10 +76,7 @@ const FoodCard = ({ food }) => {
               <Eye size={22} />
             </Link>
 
-            <button className="flex items-center gap-2 bg-orange-500 hover:bg-black text-white px-5 py-3 rounded-2xl font-bold text-sm transition-all duration-300 shadow-md shadow-orange-100 active:scale-95">
-              <ShoppingCart size={18} />
-              Add
-            </button>
+          <CardButton food={food}></CardButton>
           </div>
         </div>
       </div>
