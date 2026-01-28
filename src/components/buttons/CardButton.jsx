@@ -3,12 +3,12 @@ import { CartContext } from "@/context/CartProvider";
 import { ShoppingCart } from "lucide-react";
 import React, { use, useState } from "react";
 
-const CardButton = ({food}) => {
+const CardButton = ({ food }) => {
   const [inCart, setInCart] = useState(false);
-   const {addToCart}=use(CartContext)
-     const handleadd2cart = () => {
+  const { addToCart } = use(CartContext);
+  const handleadd2cart = () => {
     addToCart(food);
-    setInCart(true)
+    setInCart(true);
   };
   return (
     <div>

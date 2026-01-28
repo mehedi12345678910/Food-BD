@@ -2,12 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { PlayCircle, ShoppingCart, MapPin, Tag, ArrowLeft } from "lucide-react"; // npm i lucide-react
 
+export function generateStaticParams(){
+  return[{id:"52898"},{id:"52955"},{id:"52926"}]
+}
 // Data fetching function
 const getSingleFood = async (id) => {
   try {
     const res = await fetch(
       `https://taxi-kitchen-api.vercel.app/api/v1/foods/${id}`,
-      { next: { revalidate: 3600 } }
+      { next: { revalidate: 10} }
     );
     if (!res.ok) return null;
     const data = await res.json();
