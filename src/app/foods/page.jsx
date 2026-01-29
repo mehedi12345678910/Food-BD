@@ -14,6 +14,14 @@ const getFoods = async (search) => {
   await new Promise((resolve)=>setTimeout(resolve,3000))
   return data.foods || [];
 };
+
+
+// logo er name paltabe jokhon onno route a jabo
+export const metadata = {
+  title: "All Foods",
+  description: "Best FastFood in Bangladesh",
+};
+
 //search food
 
 const FoodsPage = async ({searchParams}) => {

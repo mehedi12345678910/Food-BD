@@ -5,6 +5,9 @@ import { PlayCircle, ShoppingCart, MapPin, Tag, ArrowLeft } from "lucide-react";
 export function generateStaticParams(){
   return[{id:"52898"},{id:"52955"},{id:"52926"}]
 }
+
+
+
 // Data fetching function
 const getSingleFood = async (id) => {
   try {
@@ -21,6 +24,8 @@ const getSingleFood = async (id) => {
   }
 };
 
+
+// logo er name paltabe
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const food = await getSingleFood(id);
